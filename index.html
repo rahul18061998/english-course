@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="manifest" href="manifest.json">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comprehensive English Learning Course for Developers</title>
@@ -9,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
     <style>
         /* Modern CSS Reset & Design Tokens */
         :root {
@@ -601,7 +601,7 @@
 
                 <h3>2. Corporate Phrases (Meeting and Chat Slangs)</h3>
                 <ul class="bullet-list" style="list-style: none; margin-left: 20px; display: grid; gap: 12px; margin-top: 15px;">
-                    <li><i class="fa-solid fa-chevron-right" style="color: var(--secondary);"></i> <strong>"On the same page"</strong> - Matlab sab ek baat par sehmat hain. <br><em>Example: "Let's align to ensure we are on the same page."</em></li>
+                    <li><i class="fa-solid fa-chevron-right" style="color: var(--secondary);"></i> <strong>"On the same page"</strong> - Matlab sab ek baat par sach hain. <br><em>Example: "Let's align to ensure we are on the same page."</em></li>
                     <li><i class="fa-solid fa-chevron-right" style="color: var(--secondary);"></i> <strong>"ASAP" (As Soon As Possible)</strong> - Jitna jaldi ho sake. <br><em>Example: "I will deploy the fix ASAP."</em></li>
                     <li><i class="fa-solid fa-chevron-right" style="color: var(--secondary);"></i> <strong>"Bandwidth"</strong> - Matlab kaam karne ka extra time hona. <br><em>Example: "I don't have the bandwidth for extra tasks this week."</em></li>
                 </ul>
@@ -741,7 +741,7 @@
             const activeItem = Array.from(menuItems).find(item => item.getAttribute('onclick').includes(tabId));
             if (activeItem) activeItem.classList.add('active');
 
-            // Hide all sections
+            // Show current section
             const sections = document.querySelectorAll('.course-section');
             sections.forEach(section => section.classList.remove('active'));
 
@@ -752,14 +752,16 @@
             }
         }
     </script>
+
+    <!-- Service Worker Registration Script -->
     <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/english-course/sw.js')
-        .then(reg => console.log('Service Worker Registered!', reg))
-        .catch(err => console.log('Service Worker Failed!', err));
-    });
-  }
-</script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/english-course/sw.js')
+            .then(reg => console.log('Service Worker Registered!', reg))
+            .catch(err => console.log('Service Worker Failed!', err));
+        });
+      }
+    </script>
 </body>
 </html>
