@@ -1,0 +1,18 @@
+{
+  "name": "Comprehensive English Learning Course",
+  "short_name": "English Course",
+  "description": "A comprehensive English learning guide and course for developers, freelancers, and e-commerce experts.",
+  "start_url": "/english-course/",
+  "display": "standalone",
+  "background_color": "#1e3a8a",
+  "theme_color": "#1e3a8a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3261/3261308.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
