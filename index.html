@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EnglishMastery Pro | Complete Zero to Advanced English Learning Platform</title>
-    <meta name="description" content="Complete English Learning Platform: Basic English, Speaking, Reading, Writing, Advanced Grammar, Business English, Quizzes & Certificate.">
+    <title>EnglishMastery Pro | Professional English Learning & Story Hub</title>
+    <meta name="description" content="Professional English Learning Platform with Advanced Grammar, Stories Library, Listening Lab, Speaking Practice & Certificates.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .mod-active { background: linear-gradient(135deg, #1d4ed8, #4338ca); color: white; border-color: #1d4ed8; transform: translateY(-2px); }
+        .mod-active { background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; border-color: #1e40af; transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3); }
         .tab-active { border-bottom: 3px solid #2563eb; color: #2563eb; font-weight: 700; background-color: #eff6ff; }
         @media print {
             body * { visibility: hidden; }
@@ -20,107 +20,113 @@
 <body class="bg-slate-50 text-slate-800 font-sans">
 
     <!-- Top Navbar -->
-    <nav class="bg-white shadow-sm sticky top-0 z-40 border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 py-3.5 flex flex-wrap justify-between items-center gap-3">
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-40 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-3">
             <div class="flex items-center space-x-2.5">
                 <span class="bg-blue-600 text-white font-extrabold px-3 py-1.5 rounded-xl text-lg shadow-sm">EM</span>
                 <div>
                     <span class="font-extrabold text-xl text-slate-900 tracking-tight">EnglishMastery</span>
-                    <span class="text-xs bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded-full ml-1">PRO</span>
+                    <span class="text-xs bg-indigo-100 text-indigo-800 font-bold px-2 py-0.5 rounded-full ml-1">ELITE PRO</span>
                 </div>
             </div>
-            <div class="flex items-center gap-4">
-                <div class="text-sm font-semibold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-lg">
-                    Course Progress: <span id="progress-text" class="text-blue-600 font-extrabold">0%</span>
+            <div class="flex items-center gap-3">
+                <div class="text-xs md:text-sm font-semibold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-lg hidden sm:block">
+                    Overall Progress: <span id="progress-text" class="text-blue-600 font-extrabold">0%</span>
                 </div>
-                <button onclick="openCertificateModal()" class="bg-amber-500 hover:bg-amber-600 text-white font-bold px-4 py-1.5 rounded-lg text-sm shadow-sm transition flex items-center gap-1.5">
+                <button onclick="openCertificateModal()" class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-4 py-1.5 rounded-xl text-xs md:text-sm shadow transition flex items-center gap-1.5">
                     🏆 Get Certificate
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero & Daily Vocabulary Banner -->
-    <header class="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-10 px-4">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 items-center">
+    <!-- Professional Hero Header -->
+    <header class="bg-gradient-to-br from-slate-900 via-indigo-950 to-blue-950 text-white py-12 px-4 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center relative z-10">
             <div class="md:col-span-2">
-                <span class="bg-blue-500/20 border border-blue-400/30 text-blue-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Zero to Fluent English Platform</span>
-                <h1 class="text-3xl md:text-4xl font-extrabold mt-3 mb-3 leading-tight">Beginner se Fluent Professional English Tak ka Complete Safar</h1>
-                <p class="text-blue-100/90 text-sm md:text-base max-w-2xl">Alphabet, Grammar, Daily Speaking, Reading Comprehension, Professional Writing aur Interview Skills—audio pronunciation, mic check aur certificate ke saath.</p>
+                <span class="bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">Zero to Advanced Professional Hub</span>
+                <h1 class="text-3xl md:text-5xl font-extrabold mt-4 mb-3 leading-tight">Master English with Stories, Audio Labs & Pro Modules</h1>
+                <p class="text-blue-100/90 text-base max-w-2xl leading-relaxed">Ek aisi professional website jahan aap Grammar ke saath-sath **Story Reading Library, Listening Audio Labs, Mic Speaking Practice aur Corporate Skills** sab kuch ek hi jagah sikh sakte hain.</p>
             </div>
             <!-- Daily Vocabulary Card -->
-            <div class="bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl">
+            <div class="bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl shadow-xl">
                 <div class="flex justify-between items-center mb-2">
-                    <span class="text-xs font-bold uppercase tracking-wider text-amber-300">✨ Daily Vocabulary</span>
-                    <button onclick="nextVocab()" class="text-xs bg-white/20 hover:bg-white/30 px-2 py-1 rounded transition">Next Word →</button>
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-300">✨ Pro Word of the Day</span>
+                    <button onclick="nextVocab()" class="text-xs bg-white/20 hover:bg-white/30 px-2.5 py-1 rounded-lg transition font-medium">Next →</button>
                 </div>
-                <div id="vocab-word" class="text-2xl font-extrabold text-white">Articulate</div>
-                <div id="vocab-meaning" class="text-sm text-blue-100 mt-1">Spasht aur prabhavshali dhang se bolna</div>
-                <div id="vocab-example" class="text-xs text-slate-300 italic mt-2">"She is very articulate during business meetings."</div>
-                <button onclick="speakVocab()" class="mt-3 bg-blue-500 hover:bg-blue-400 text-white text-xs font-bold px-3 py-1.5 rounded-lg transition">🔊 Listen Pronunciation</button>
+                <div id="vocab-word" class="text-2xl font-extrabold text-white">Resilience</div>
+                <div id="vocab-meaning" class="text-sm text-blue-100 mt-1">Mushkil samay mein bhi haar na manna (Dridhta)</div>
+                <div id="vocab-example" class="text-xs text-slate-300 italic mt-2">"Building resilience is key to mastering a new language."</div>
+                <button onclick="speakVocab()" class="mt-3.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-3.5 py-2 rounded-xl transition shadow flex items-center gap-1.5">
+                    🔊 Listen Pronunciation
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- Main Learning Area -->
+    <!-- Main Content Hub -->
     <main class="max-w-7xl mx-auto px-4 py-8">
 
-        <!-- 6 Core Modules Grid -->
-        <div class="mb-8">
-            <h2 class="text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-3">Step 1: Apna Learning Module Chunein (1 se 6 Tak)</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3" id="module-grid">
-                <button onclick="selectModule(1)" id="mod-btn-1" class="mod-active border-2 border-slate-200 p-4 rounded-xl text-left transition shadow-sm">
-                    <div class="text-xs opacity-80 font-semibold">Module 1 • Beginner</div>
-                    <div class="font-bold text-base mt-0.5">1. Basic English & Foundation</div>
-                    <div class="text-xs opacity-75 mt-1">Alphabet, Words, Pronouns, Daily Use</div>
+        <!-- 6 Core Professional Modules -->
+        <div class="mb-10">
+            <div class="flex justify-between items-center mb-3">
+                <h2 class="text-xs font-extrabold uppercase tracking-wider text-slate-500">Step 1: Select Learning Module (1 to 6)</h2>
+                <span class="text-xs text-slate-400 font-medium">Click any module to open classroom</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="module-grid">
+                <button onclick="selectModule(1)" id="mod-btn-1" class="mod-active border-2 border-slate-200 p-5 rounded-2xl text-left transition shadow-sm">
+                    <div class="text-xs opacity-90 font-bold">Module 1 • Beginner</div>
+                    <div class="font-bold text-lg mt-1">1. Basic English & Foundation</div>
+                    <div class="text-xs opacity-80 mt-1">Alphabet, Words, Pronouns, Daily Phrases</div>
                 </button>
-                <button onclick="selectModule(2)" id="mod-btn-2" class="bg-white border-2 border-slate-200 p-4 rounded-xl text-left hover:border-blue-400 transition shadow-sm">
-                    <div class="text-xs text-blue-600 font-semibold">Module 2 • Fluency</div>
-                    <div class="font-bold text-base mt-0.5">2. English Speaking</div>
+                <button onclick="selectModule(2)" id="mod-btn-2" class="bg-white border-2 border-slate-200 p-5 rounded-2xl text-left hover:border-blue-400 transition shadow-sm">
+                    <div class="text-xs text-blue-600 font-bold">Module 2 • Fluency</div>
+                    <div class="font-bold text-lg text-slate-900 mt-1">2. English Speaking</div>
                     <div class="text-xs text-slate-500 mt-1">Self-Intro, Conversations, Q&A, Confidence</div>
                 </button>
-                <button onclick="selectModule(3)" id="mod-btn-3" class="bg-white border-2 border-slate-200 p-4 rounded-xl text-left hover:border-blue-400 transition shadow-sm">
-                    <div class="text-xs text-blue-600 font-semibold">Module 3 • Comprehension</div>
-                    <div class="font-bold text-base mt-0.5">3. English Reading</div>
-                    <div class="text-xs text-slate-500 mt-1">Pronunciation, Stories, Paragraphs</div>
+                <button onclick="selectModule(3)" id="mod-btn-3" class="bg-white border-2 border-slate-200 p-5 rounded-2xl text-left hover:border-blue-400 transition shadow-sm">
+                    <div class="text-xs text-blue-600 font-bold">Module 3 • Reading Library</div>
+                    <div class="font-bold text-lg text-slate-900 mt-1">3. Stories & Articles</div>
+                    <div class="text-xs text-slate-500 mt-1">Short Stories, Moral Tales & Comprehension</div>
                 </button>
-                <button onclick="selectModule(4)" id="mod-btn-4" class="bg-white border-2 border-slate-200 p-4 rounded-xl text-left hover:border-blue-400 transition shadow-sm">
-                    <div class="text-xs text-blue-600 font-semibold">Module 4 • Composition</div>
-                    <div class="font-bold text-base mt-0.5">4. English Writing</div>
+                <button onclick="selectModule(4)" id="mod-btn-4" class="bg-white border-2 border-slate-200 p-5 rounded-2xl text-left hover:border-blue-400 transition shadow-sm">
+                    <div class="text-xs text-blue-600 font-bold">Module 4 • Writing Lab</div>
+                    <div class="font-bold text-lg text-slate-900 mt-1">4. English Writing</div>
                     <div class="text-xs text-slate-500 mt-1">Applications, Emails, Letters, Essays</div>
                 </button>
-                <button onclick="selectModule(5)" id="mod-btn-5" class="bg-white border-2 border-slate-200 p-4 rounded-xl text-left hover:border-blue-400 transition shadow-sm">
-                    <div class="text-xs text-blue-600 font-semibold">Module 5 • Core Rules</div>
-                    <div class="font-bold text-base mt-0.5">5. Grammar (Basic to Advanced)</div>
+                <button onclick="selectModule(5)" id="mod-btn-5" class="bg-white border-2 border-slate-200 p-5 rounded-2xl text-left hover:border-blue-400 transition shadow-sm">
+                    <div class="text-xs text-blue-600 font-bold">Module 5 • Core Rules</div>
+                    <div class="font-bold text-lg text-slate-900 mt-1">5. Grammar (Basic to Advanced)</div>
                     <div class="text-xs text-slate-500 mt-1">Tenses, Voice, Narration, Modals, Conditionals</div>
                 </button>
-                <button onclick="selectModule(6)" id="mod-btn-6" class="bg-white border-2 border-slate-200 p-4 rounded-xl text-left hover:border-blue-400 transition shadow-sm">
-                    <div class="text-xs text-blue-600 font-semibold">Module 6 • Corporate & Career</div>
-                    <div class="font-bold text-base mt-0.5">6. Advanced & Professional English</div>
+                <button onclick="selectModule(6)" id="mod-btn-6" class="bg-white border-2 border-slate-200 p-5 rounded-2xl text-left hover:border-blue-400 transition shadow-sm">
+                    <div class="text-xs text-blue-600 font-bold">Module 6 • Career & Corporate</div>
+                    <div class="font-bold text-lg text-slate-900 mt-1">6. Advanced & Professional English</div>
                     <div class="text-xs text-slate-500 mt-1">Interviews, Office Talk, Presentations, GD</div>
                 </button>
             </div>
         </div>
 
         <!-- Interactive Classroom Box -->
-        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-            <!-- Sub-Tabs -->
-            <div class="flex border-b border-slate-200 overflow-x-auto bg-slate-50">
-                <button onclick="selectTab('lesson')" id="tab-lesson" class="tab-active flex-1 py-4 px-4 text-center whitespace-nowrap transition text-sm">📘 Chapter Lesson & Examples</button>
-                <button onclick="selectTab('practice')" id="tab-practice" class="flex-1 py-4 px-4 text-center text-slate-600 hover:text-blue-600 whitespace-nowrap transition text-sm">🎤 Speaking & Mic Practice</button>
-                <button onclick="selectTab('assignment')" id="tab-assignment" class="flex-1 py-4 px-4 text-center text-slate-600 hover:text-blue-600 whitespace-nowrap transition text-sm">✍️ Reading & Writing Task</button>
-                <button onclick="selectTab('quiz')" id="tab-quiz" class="flex-1 py-4 px-4 text-center text-slate-600 hover:text-blue-600 whitespace-nowrap transition text-sm">✅ MCQ Test</button>
+        <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+            <!-- Sub-Tabs Navigation -->
+            <div class="flex border-b border-slate-200 overflow-x-auto bg-slate-50/80">
+                <button onclick="selectTab('lesson')" id="tab-lesson" class="tab-active flex-1 py-4 px-4 text-center whitespace-nowrap transition text-sm font-semibold">📘 Chapter Lessons</button>
+                <button onclick="selectTab('stories')" id="tab-stories" class="flex-1 py-4 px-4 text-center text-slate-600 hover:text-blue-600 whitespace-nowrap transition text-sm font-semibold">📖 Story Reading Library</button>
+                <button onclick="selectTab('audioLab')" id="tab-audioLab" class="flex-1 py-4 px-4 text-center text-slate-600 hover:text-blue-600 whitespace-nowrap transition text-sm font-semibold">🎧 Audio & Video Listening Lab</button>
+                <button onclick="selectTab('practice')" id="tab-practice" class="flex-1 py-4 px-4 text-center text-slate-600 hover:text-blue-600 whitespace-nowrap transition text-sm font-semibold">🎤 Mic Speaking Check</button>
+                <button onclick="selectTab('quiz')" id="tab-quiz" class="flex-1 py-4 px-4 text-center text-slate-600 hover:text-blue-600 whitespace-nowrap transition text-sm font-semibold">✅ MCQ Test</button>
             </div>
 
-            <!-- Dynamic Lesson Content -->
-            <div id="content-area" class="p-6 md:p-8">
-                <!-- Loads dynamically -->
+            <!-- Dynamic Classroom Content -->
+            <div id="content-area" class="p-6 md:p-10">
+                <!-- Content loads dynamically -->
             </div>
 
-            <!-- Lesson Completion Footer -->
-            <div class="bg-slate-50 px-6 py-4 border-t border-slate-200 flex flex-wrap justify-between items-center gap-3">
-                <span class="text-sm text-slate-600" id="module-status">Status: Pending</span>
-                <button onclick="markCompleted()" id="complete-btn" class="bg-green-600 hover:bg-green-700 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition shadow-sm">
+            <!-- Completion Footer -->
+            <div class="bg-slate-50 px-6 py-5 border-t border-slate-200 flex flex-wrap justify-between items-center gap-3">
+                <span class="text-sm font-medium text-slate-600" id="module-status">Status: Pending Practice</span>
+                <button onclick="markCompleted()" id="complete-btn" class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-xl text-sm transition shadow-md flex items-center gap-2">
                     ✓ Mark Chapter Complete
                 </button>
             </div>
@@ -129,45 +135,47 @@
     </main>
 
     <!-- Certificate Modal -->
-    <div id="certificate-modal" class="hidden fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-3xl w-full p-6 md:p-10 shadow-2xl relative border-8 border-double border-amber-500 text-center">
-            <button onclick="closeCertificateModal()" class="no-print absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold">✕</button>
-            <div class="text-amber-600 font-extrabold tracking-widest uppercase text-sm mb-2">EnglishMastery Pro Learning Platform</div>
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-2">Certificate of Completion</h2>
-            <p class="text-slate-500 text-sm mb-6">This is proudly presented to</p>
+    <div id="certificate-modal" class="hidden fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-3xl w-full p-6 md:p-12 shadow-2xl relative border-8 border-double border-amber-500 text-center">
+            <button onclick="closeCertificateModal()" class="no-print absolute top-5 right-5 text-slate-400 hover:text-slate-700 text-2xl font-bold">✕</button>
+            <div class="text-amber-600 font-extrabold tracking-widest uppercase text-xs md:text-sm mb-2">EnglishMastery Professional Certification</div>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-2">Certificate of Achievement</h2>
+            <p class="text-slate-500 text-sm mb-6">This professional certification is proudly presented to</p>
             
-            <input type="text" id="cert-name-input" placeholder="Apna Poora Naam Yahan Likhein..." class="no-print border-2 border-blue-300 rounded-lg px-4 py-2 text-center font-bold text-lg mb-4 w-full max-w-md focus:outline-none focus:border-blue-600" oninput="updateCertName()">
-            <div id="cert-name-display" class="text-3xl font-extrabold text-blue-800 border-b-2 border-slate-300 inline-block px-8 pb-1 mb-6">Student Name</div>
+            <input type="text" id="cert-name-input" placeholder="Type Your Full Name Here..." class="no-print border-2 border-blue-400 rounded-xl px-4 py-2.5 text-center font-extrabold text-lg md:text-xl mb-4 w-full max-w-md focus:outline-none focus:border-blue-600 shadow-inner" oninput="updateCertName()">
+            <div id="cert-name-display" class="text-3xl md:text-4xl font-extrabold text-blue-900 border-b-2 border-slate-300 inline-block px-8 pb-1 mb-6 font-serif">Your Name</div>
             
-            <p class="text-slate-700 max-w-xl mx-auto leading-relaxed mb-6">
-                For successfully completing the <strong>Complete Basic to Advanced English Mastery Course</strong> covering Grammar, Speaking Fluency, Reading Comprehension, Writing, and Professional Communication.
+            <p class="text-slate-700 max-w-xl mx-auto leading-relaxed text-sm md:text-base mb-8">
+                For successfully completing the <strong>Complete Zero to Advanced English Mastery Program</strong> including Grammar, Story Reading Library, Audio Listening Labs, Speaking Fluency, and Professional Writing.
             </p>
-            <div class="flex justify-between items-center text-xs text-slate-500 max-w-lg mx-auto pt-4 border-t border-slate-200">
+            
+            <div class="flex justify-between items-center text-xs md:text-sm text-slate-500 max-w-lg mx-auto pt-4 border-t border-slate-200 mb-8">
                 <div>Date: <span id="cert-date"></span></div>
                 <div>Progress: <span id="cert-progress">0%</span></div>
                 <div class="font-bold text-slate-800">Director, EnglishMastery</div>
             </div>
-            <div class="mt-6 no-print">
-                <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-2.5 rounded-xl shadow transition">🖨️ Print / Save as PDF Certificate</button>
+            
+            <div class="no-print flex justify-center gap-4">
+                <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-7 py-3 rounded-xl shadow-lg transition flex items-center gap-2">
+                    🖨️ Print / Save PDF Certificate
+                </button>
             </div>
         </div>
     </div>
 
-    <footer class="text-center py-8 text-slate-500 text-sm border-t border-slate-200 mt-12">
-        <p>© 2026 EnglishMastery Pro — Complete Zero to Advanced English Learning Platform.</p>
+    <footer class="text-center py-10 text-slate-500 text-sm border-t border-slate-200 mt-16 bg-white">
+        <p>© 2026 EnglishMastery Elite Pro — Professional English Learning Platform.</p>
     </footer>
 
     <script>
-        // Daily Vocabulary Data
+        // Vocabulary Bank
         const vocabList = [
-            { word: "Articulate", meaning: "Spasht aur prabhavshali dhang se bolna", example: "She is very articulate during business meetings." },
-            { word: "Perseverance", meaning: "Lagatar mehnat aur dridh nishchay", example: "Success in English requires daily perseverance." },
-            { word: "Comprehend", meaning: "Poori tarah samajhna", example: "Read slowly so you can comprehend every sentence." },
-            { word: "Eloquent", meaning: "Farratedar aur sundar bhasha bolne wala", example: "He gave an eloquent speech on stage." },
-            { word: "Collaborate", meaning: "Milkar kaam karna", example: "Teams collaborate to finish projects on time." }
+            { word: "Resilience", meaning: "Mushkil samay mein bhi haar na manna", example: "Building resilience is key to mastering a new language." },
+            { word: "Meticulous", meaning: "Bahut dhyan se aur saavdhani se kaam karne wala", example: "She is meticulous about her English grammar notes." },
+            { word: "Eloquent", meaning: "Farratedar aur sundar bhasha bolne wala", example: "He delivered an eloquent speech during the conference." },
+            { word: "Pragmatic", meaning: "Vyavaharik aur samajhdari bhara faisla", example: "We need a pragmatic approach to learn English faster." }
         ];
         let vocabIndex = 0;
-
         function nextVocab() {
             vocabIndex = (vocabIndex + 1) % vocabList.length;
             const v = vocabList[vocabIndex];
@@ -179,324 +187,330 @@
             speakText(vocabList[vocabIndex].word + ". " + vocabList[vocabIndex].example);
         }
 
-        // Complete 6 Modules Curriculum Data
+        // Stories Library Data (Story Reading Library)
+        const storiesLibrary = [
+            {
+                title: "1. The Thirsty Crow (Moral Short Story)",
+                text: "One hot summer day, a thirsty crow flew across fields looking for water. For a long time, he could find none. At last, he saw a pitcher with a little water at the bottom. He tried to drink, but his beak could not reach it. Suddenly, he had a brilliant idea. He picked up small pebbles one by one and dropped them into the pitcher. Slowly, the water rose up, and the clever crow drank his fill.",
+                moral: "Moral: Where there is a will, there is a way. (Jahan chah wahan rah)."
+            },
+            {
+                title: "2. The Value of Consistent Habits",
+                text: "Success is never built overnight; it is the product of daily habits. If you read just two pages of an English book every day, you will read over 700 pages in a year. Small, consistent efforts compound into massive results over time. Do not wait for motivation; build a unbreakable daily routine.",
+                moral: "Moral: Consistency beats sudden intense bursts of hard work."
+            },
+            {
+                title: "3. The Power of Positive Self-Talk",
+                text: "Many learners struggle with English not because they lack intelligence, but because of self-doubt. When you say 'I cannot speak English', your brain stops trying. Instead, shift your mindset to 'I am improving every single day.' Confidence is a skill built through repeated action and positive reinforcement.",
+                moral: "Moral: Your mindset shapes your reality and capabilities."
+            },
+            {
+                title: "4. The Wise Old Fisherman",
+                text: "An old fisherman was resting by the sea when a businessman advised him to catch more fish, buy bigger boats, and build an empire. The fisherman smiled and asked, 'And what will I do then?' The businessman replied, 'You can relax and enjoy life.' The fisherman smiled wider and said, 'Isn't that what I am doing right now?'",
+                moral: "Moral: True peace and happiness lie in appreciating the present moment."
+            }
+        ];
+
+        // Audio & Video Listening Lab Scripts
+        const audioLabsData = [
+            {
+                title: "Audio Clip 1: Daily Morning Routine Conversation",
+                speaker: "Aman & Priya",
+                script: "Aman: Good morning Priya! Did you practice your English listening today?\nPriya: Good morning Aman! Yes, I listened to a 10-minute podcast during my morning walk.\nAman: That's fantastic! Regular listening makes speaking much more natural."
+            },
+            {
+                title: "Audio Clip 2: Asking for Directions in a New City",
+                speaker: "Tourist & Local",
+                script: "Tourist: Excuse me, could you please guide me to the nearest metro station?\nLocal: Sure! Walk straight for two blocks, then take a left turn near the coffee shop. You will see the station entrance right there.\nTourist: Thank you so much for your kindness!"
+            },
+            {
+                title: "Audio Clip 3: Professional Phone Call Etiquette",
+                speaker: "Manager & Client",
+                script: "Manager: Good afternoon, this is Rahul calling from Tech Solutions. Am I speaking with Mr. Sharma?\nClient: Hello Rahul! Yes, Mr. Sharma here. How can I help you today?\nManager: I am calling to discuss the project delivery timeline for next week."
+            }
+        ];
+
+        // Core Modules Data
         const modulesData = {
             1: {
                 badge: "Module 1 • Basic English – Beginner",
-                title: "Alphabet, Sentence Formation, Pronouns & Daily-Use English",
-                explanation: "English ki shuruat 26 Letters (5 Vowels: A, E, I, O, U aur 21 Consonants) se hoti hai. Sentence banane ka basic formula hai: Subject + Verb + Object (e.g., I eat food). Pronouns (I, You, We, They, He, She, It) ka use Noun ki jagah hota hai.",
+                title: "Alphabet, Sentence Formation, Pronouns & Daily Vocabulary",
+                explanation: "English ki shuruat 26 Letters aur basic sentence structure (Subject + Verb + Object) se hoti hai. Pronouns (I, You, He, She, We, They) noun ki jagah use hote hain.",
                 examples: [
-                    { en: "I am ready to learn English from zero.", hi: "Main zero se English seekhne ke liye taiyar hoon." },
-                    { en: "She has a very good habit of reading.", hi: "Uske paas padhne ki bahut achhi aadat hai." },
-                    { en: "Please give me a glass of water.", hi: "Kripya mujhe ek gilas paani dijiye." },
-                    { en: "What is your good name?", hi: "Aapka shubh naam kya hai?" }
+                    { en: "I am learning professional English.", hi: "Main professional English seekh raha hoon." },
+                    { en: "She works hard every single day.", hi: "Woh har ek din kathin parishram karti hai." },
+                    { en: "Please share your feedback with us.", hi: "Kripya apna feedback hamare saath share karein." }
                 ],
-                speakTarget: "Hello, I am learning basic English sentences every day.",
-                readingTitle: "Beginner Reading: My Family & Home",
-                readingText: "My name is Aarav. I live in a small and happy family. My father is a teacher and my mother is a homemaker. I have one younger sister. Every morning, we eat breakfast together and help each other.",
-                writingPrompt: "Apne baare mein aur apne parivar ke baare mein 5 chhote English sentences likhein (Pronouns I, My, We, He, She ka use karein):",
-                writingSample: "1. My name is Rahul.\n2. I live in India.\n3. He is my brother.\n4. She is my mother.\n5. We are a happy family.",
-                quiz: {
-                    q: "Inmein se kaunsa word ek Pronoun hai?",
-                    options: ["Apple", "They", "Run", "Happy"],
-                    ans: 1
-                }
+                speakTarget: "I am building a strong foundation in English every day.",
+                quiz: { q: "Inmein se kaunsa word ek Subject Pronoun hai?", options: ["Table", "They", "Quickly", "Beautiful"], ans: 1 }
             },
             2: {
                 badge: "Module 2 • English Speaking",
                 title: "Self-Introduction, Daily Conversations & Real-Life Situations",
-                explanation: "English bolne ke liye grammar se zyada zaroori hai 'Ready-to-use Phrases' aur aatmavishwas. Kisi se milte waqt, bazaar mein, ya phone par baat karte waqt in sentences ka use karein.",
+                explanation: "Farratedar bolne ke liye ready-to-use expressions aur confidence sabse zaroori hain. Kisi se milne par ya market mein inka use karein.",
                 examples: [
-                    { en: "Hi, I'm Rahul. Nice to meet you!", hi: "Namaste, main Rahul hoon. Aapse milkar khushi hui!" },
-                    { en: "Excuse me, could you tell me the way to the station?", hi: "Maaf kijiyega, kya aap mujhe station ka rasta bata sakte hain?" },
-                    { en: "How much does this item cost?", hi: "Is cheez ki keemat kitni hai?" },
-                    { en: "I totally agree with your point.", hi: "Main aapki baat se poori tarah sahmat hoon." }
+                    { en: "It is an absolute pleasure to meet you.", hi: "Aapse milkar behad khushi hui." },
+                    { en: "Could you please explain this point again?", hi: "Kya aap is point ko kripya dobara samjha sakte hain?" },
+                    { en: "Let me know when you are free for a quick call.", hi: "Mujhe batana jab aap ek chhotisi call ke liye free ho." }
                 ],
-                speakTarget: "Nice to meet you. Could you please help me with this?",
-                readingTitle: "Dialogue Reading: At a Coffee Shop",
-                readingText: "Customer: Good morning! Can I get a cup of hot coffee, please?\nBarista: Good morning! Sure, would you like small or large?\nCustomer: A large cappuccino with less sugar, please.\nBarista: That will be 150 rupees. Your order will be ready in five minutes.",
-                writingPrompt: "Apna 60-second ka Self-Introduction likhein (Naam, Jagah, Kaam/Padhai, Hobbies aur Goal):",
-                writingSample: "Good morning everyone. My name is Rahul Gupta. I am from Chhattisgarh. Currently, I am working on improving my communication and technical skills. In my free time, I enjoy reading books. My goal is to become a confident public speaker. Thank you.",
-                quiz: {
-                    q: "Kisi se pehli baar milne par kya kehna sabse polite hai?",
-                    options: ["Who are you?", "Nice to meet you!", "Go away", "Tell me your work"],
-                    ans: 1
-                }
+                speakTarget: "It is a pleasure to meet you. How can I assist you today?",
+                quiz: { q: "Formal conversation mein 'Tell me' ki jagah kya use karna behtar hai?", options: ["Shut up", "Could you please tell me", "Hey you", "Nothing"], ans: 1 }
             },
             3: {
-                badge: "Module 3 • English Reading",
-                title: "Pronunciation, Paragraphs, Stories & Comprehension",
-                explanation: "Reading sudharne ke liye pehle shabdon ka sahi uchcharan (Pronunciation) sunein, phir poore paragraph ko bina ruke padhne ka abhyas karein. Difficult words ka arth poore sentence ke bhav (context) se samjhein.",
+                badge: "Module 3 • Reading Library Hub",
+                title: "Stories, Moral Tales & Comprehension Passages",
+                explanation: "Neeche diye gaye tab mein aapko 4 professional short stories aur moral tales milengi jinhe padh kar aap apni reading speed aur vocabulary sudhaar sakte hain.",
                 examples: [
-                    { en: "Knowledge is power when applied correctly.", hi: "Gyan tabhi shakti banta hai jab uska sahi istemal ho." },
-                    { en: "Consistency beats talent when talent doesn't work hard.", hi: "Lagatar mehnat talent ko bhi peeche chhod deti hai." },
-                    { en: "Silent letters example: Honest, Knife, Psychology.", hi: "Silent letters: Honest (H silent), Knife (K silent), Psychology (P silent)." }
+                    { en: "Reading stories daily enhances imagination and vocabulary.", hi: "Roz kahaniyan padhne se imagination aur vocabulary strong hoti hai." },
+                    { en: "Context clues help you guess unknown words without a dictionary.", hi: "Context clues se aap bina dictionary ke naye shabdon ka arth samajh sakte hain." }
                 ],
-                speakTarget: "Reading English stories daily improves both vocabulary and pronunciation.",
-                readingTitle: "Comprehension Story: The Value of Time",
-                readingText: "Time is the most valuable resource in human life. Once lost, it can never be recovered. Successful people plan their day in advance and focus on important tasks rather than wasting hours on distractions. If you invest just one hour daily in learning a new skill, you will master it within a year.",
-                writingPrompt: "Upar di gayi story padhne ke baad batayein: 1) Sabse keemti cheez kya hai? 2) Roz 1 ghanta seekhne se kya hota hai? Apne shabdon mein likhein:",
-                writingSample: "1. Time is the most valuable resource.\n2. If we invest one hour daily in learning a new skill, we can master it in a year.",
-                quiz: {
-                    q: "'Honest' shabd mein kaunsa letter silent rehta hai?",
-                    options: ["O", "N", "H", "T"],
-                    ans: 2
-                }
+                speakTarget: "Reading inspiring stories expands both knowledge and eloquence.",
+                quiz: { q: "'The Thirsty Crow' kahani se hamein kya sikh milti hai?", options: ["Jahan chah wahan rah", "Alas buri bala hai", "Sabar ka fal meotha", "Kuch nahi"], ans: 0 }
             },
             4: {
-                badge: "Module 4 • English Writing",
-                title: "Sentences, Paragraphs, Applications, Emails & Essays",
-                explanation: "Achhi writing ke liye clear structure zaroori hai. Formal Email ya Application mein hamesha Subject line, Polite Greeting (Dear Sir/Madam), Main Message aur Closing (Sincerely/Regards) likhein.",
+                badge: "Module 4 • English Writing Lab",
+                title: "Sentences, Paragraphs, Formal Emails & Applications",
+                explanation: "Professional writing mein Subject line, clear body paragraphs aur polite closing (Regards/Sincerely) hona anivarya hai.",
                 examples: [
-                    { en: "Formal Opening: I am writing this email to request...", hi: "Main yeh email anurodh karne ke liye likh raha hoon..." },
-                    { en: "Application Closing: Thank you for your time and consideration.", hi: "Aapke samay aur vichar ke liye dhanyavad." },
-                    { en: "Essay Connector: Furthermore, education plays a vital role.", hi: "Iske alava, shiksha ek mahatvapurna bhumika nibhati hai." }
+                    { en: "Subject: Request for Project Extension Approval", hi: "Subject: Project ki deadline badhane ke liye anurodh." },
+                    { en: "Thank you for your valuable time and consideration.", hi: "Aapke keemti samay aur vichar ke liye dhanyavad." }
                 ],
-                speakTarget: "I am writing to formally apply for the software developer position.",
-                readingTitle: "Sample Formal Leave Application / Email",
-                readingText: "Subject: Application for Two Days Sick Leave\n\nDear Manager,\n\nI am writing to inform you that I am down with a high fever and have been advised by the doctor to take rest. Therefore, I kindly request leave for two days (November 17 and 18). I will resume work on November 19.\n\nRegards,\nRahul Gupta",
-                writingPrompt: "Apne Principal ya Manager ko 2 din ki chhutti ke liye ek Formal Email / Application likhein:",
-                writingSample: "Subject: Leave Request for Two Days\n\nDear Sir,\nI need two days leave due to an urgent family function at home. Please grant me leave for tomorrow and the day after. Thank you.\n\nYours sincerely,\nRahul",
-                quiz: {
-                    q: "Ek Formal Email mein sabse pehle kya likha jata hai?",
-                    options: ["Your Signature", "Subject Line", "Joke", "Bye"],
-                    ans: 1
-                }
+                speakTarget: "I am writing to formally submit our quarterly progress report.",
+                quiz: { q: "Formal Email ke shuru mein kya likhna zaroori hai?", options: ["A joke", "Subject Line", "A song", "Movie name"], ans: 1 }
             },
             5: {
-                badge: "Module 5 • Grammar – Basic to Advanced",
-                title: "All Tenses, Active/Passive Voice, Narration, Modals & Conditionals",
-                explanation: "Advanced Grammar aapko bina galti ke likhne aur bolne ki shakti deta hai: Tenses (samay), Modals (Can, Should, Must, Would), Active-Passive (kaam par zor dena), aur Conditionals (If-sentences).",
+                badge: "Module 5 • Core Grammar (Basic to Advanced)",
+                title: "All Tenses, Active/Passive Voice, Modals & Conditionals",
+                explanation: "Grammar ke rules aapko bina kisi galti ke professional writing aur fluent speaking karne ki shakti dete hain.",
                 examples: [
-                    { en: "Present Perfect: I have completed my assignment.", hi: "Maine apna assignment poora kar liya hai." },
-                    { en: "Passive Voice: The project was completed on time.", hi: "Project samay par poora kiya gaya." },
-                    { en: "Conditional (If): If you practice daily, you will speak fluently.", hi: "Agar tum roz practice karoge, toh farratedar bologe." },
-                    { en: "Indirect Speech: He said that he was busy.", hi: "Usne kaha ki woh vyast tha." }
+                    { en: "Present Perfect: We have successfully launched the project.", hi: "Humne safaltapoorvak project launch kar diya hai." },
+                    { en: "Conditional: If we practice daily, mastery is guaranteed.", hi: "Agar hum roz practice karein, toh safalta nishchit hai." }
                 ],
-                speakTarget: "If I had known earlier, I would have helped you immediately.",
-                readingTitle: "Grammar in Action: Active vs Passive",
-                readingText: "Active: Rahul wrote a brilliant code. (Yahan kaam karne wale 'Rahul' par zor hai).\nPassive: A brilliant code was written by Rahul. (Yahan kaam 'brilliant code' par zor hai—office reports aur news mein Passive Voice zyada use hota hai).",
-                writingPrompt: "Niche diye gaye sentences ko English mein translate karein: 1) Mujhe English seekhni chahiye (Should). 2) Agar barish hogi toh main ghar rahunga (If):",
-                writingSample: "1. I should learn English.\n2. If it rains, I will stay at home.",
-                quiz: {
-                    q: "Sahi Conditional sentence chunein: 'If you work hard, you ___ succeed.'",
-                    options: ["will", "was", "did", "had"],
-                    ans: 0
-                }
+                speakTarget: "If you dedicate thirty minutes daily, fluency will follow naturally.",
+                quiz: { q: "Sahi tense chunein: 'She ___ to office yesterday.'", options: ["go", "goes", "went", "gone"], ans: 2 }
             },
             6: {
-                badge: "Module 6 • Advanced & Professional English",
-                title: "Job Interviews, Office Communication, Business English & Public Speaking",
-                explanation: "Corporate aur professional duniya mein casual words ki jagah formal Business English ka use hota hai (jaise 'Tell me' ki jagah 'Could you elaborate', aur 'I want' ki jagah 'I would like to').",
+                badge: "Module 6 • Career & Corporate English",
+                title: "Job Interviews, Office Meetings, Presentations & Public Speaking",
+                explanation: "Corporate environment mein advanced vocabulary aur polished tone aapko sabse alag aur confident dikhati hai.",
                 examples: [
-                    { en: "Interview: My greatest strength is my problem-solving mindset.", hi: "Meri sabse badi taqat samasya suljhane ki meri soch hai." },
-                    { en: "Meeting: Let's circle back to this topic after the presentation.", hi: "Presentation ke baad hum is vishay par dobara charcha karenge." },
-                    { en: "Group Discussion: I respectfully disagree with that perspective.", hi: "Main sammanpurvak us nazariye se asahmat hoon." },
-                    { en: "Public Speaking: Thank you all for your undivided attention today.", hi: "Aaj aapke poore dhyan ke liye aap sabhi ka dhanyavad." }
+                    { en: "My key strengths include leadership and problem solving.", hi: "Meri mukhya takaton mein leadership aur problem solving shamil hai." },
+                    { en: "Let's circle back to this agenda item in our next meeting.", hi: "Aaiye agli meeting mein is topic par dobara charcha karein." }
                 ],
-                speakTarget: "Thank you for this opportunity. I am confident my skills will add value to your company.",
-                readingTitle: "Corporate Case Study: Effective Presentation Opening",
-                readingText: "Good morning, esteemed colleagues and guests. Today, I am excited to present our roadmap for digital growth. Over the next ten minutes, we will explore three key strategies that can increase customer engagement by forty percent. Let's dive right in.",
-                writingPrompt: "Interview ke sabse common sawal 'Why should we hire you?' ka 4-5 lines mein ek strong professional answer likhein:",
-                writingSample: "You should hire me because I bring a strong combination of technical skills, quick adaptability, and a dedicated work ethic. I am passionate about solving real problems and I am confident I can contribute to your team's success from day one.",
-                quiz: {
-                    q: "Office meeting mein kisi se asahmat (disagree) hone ka sabse professional tareeka kya hai?",
-                    options: ["You are completely wrong!", "I respectfully disagree with that point.", "Shut up!", "No way!"],
-                    ans: 1
-                }
+                speakTarget: "I am confident my qualifications align perfectly with your requirements.",
+                quiz: { q: "Interview mein apni strength batate waqt kya kehna sabse behtar hai?", options: ["I am perfect", "My strengths include problem solving", "I know everything", "I am lazy"], ans: 1 }
             }
         };
 
         let currentMod = 1;
         let currentTab = 'lesson';
-        let completedList = JSON.parse(localStorage.getItem('em_v2_completed') || '[]');
+        let completedSet = JSON.parse(localStorage.getItem('em_pro_v3_completed') || '[]');
 
-        // Text to Speech
-        function speakText(text) {
+        function speakText(txt) {
             window.speechSynthesis.cancel();
-            const msg = new SpeechSynthesisUtterance(text);
+            const msg = new SpeechSynthesisUtterance(txt);
             msg.lang = 'en-US';
             msg.rate = 0.92;
             window.speechSynthesis.speak(msg);
         }
 
-        // Speech Recognition (Mic Practice)
-        function startMicPractice(targetSentence) {
-            const outputDiv = document.getElementById('mic-output');
-            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-            if (!SpeechRecognition) {
-                outputDiv.innerHTML = `<span class="text-red-600 font-semibold">⚠️ Aapka browser Mic Speech Recognition support nahi karta (Google Chrome use karein).</span>`;
+        // Mic Speech Recognition
+        function startMicCheck(targetSentence) {
+            const out = document.getElementById('mic-output');
+            const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if(!SpeechRec) {
+                out.innerHTML = `<span class="text-red-600 font-medium">⚠️ Browser speech recognition supported nahi hai. Google Chrome use karein.</span>`;
                 return;
             }
-            const recognition = new SpeechRecognition();
-            recognition.lang = 'en-US';
-            outputDiv.innerHTML = `<span class="text-blue-600 font-bold animate-pulse">🎙️ Sun raha hoon... Abhi English mein bolein!</span>`;
+            const rec = new SpeechRec();
+            rec.lang = 'en-US';
+            out.innerHTML = `<span class="text-blue-600 font-bold animate-pulse">🎙️ Listening... Abhi English mein saaf-saaf bolein!</span>`;
             
-            recognition.onresult = function(event) {
-                const spoken = event.results[0][0].transcript;
-                outputDiv.innerHTML = `
-                    <div class="p-3 bg-green-50 border border-green-200 rounded-xl mt-2">
-                        <div class="text-xs text-slate-500">Aapne bola:</div>
-                        <div class="font-bold text-slate-900 text-lg">"${spoken}"</div>
-                        <div class="text-xs text-green-700 mt-1">✓ Bahut badhiya! Apne pronunciation ko upar diye sentence se match karein.</div>
+            rec.onresult = function(e) {
+                const spoken = e.results[0][0].transcript;
+                out.innerHTML = `
+                    <div class="p-4 bg-emerald-50 border border-emerald-200 rounded-xl mt-3">
+                        <div class="text-xs text-slate-500 font-semibold">Aapne bola:</div>
+                        <div class="font-extrabold text-slate-900 text-lg">"${spoken}"</div>
+                        <div class="text-xs text-emerald-700 mt-1">✓ Excellent pronunciation practice! Isse aur behtar banayein.</div>
                     </div>
                 `;
             };
-            recognition.onerror = function() {
-                outputDiv.innerHTML = `<span class="text-red-600 text-sm">Aawaz clear nahi aayi, kripya mic permission allow karke dobara bolein.</span>`;
+            rec.onerror = function() {
+                out.innerHTML = `<span class="text-red-600 text-sm">Mic permission check karein ya dobara koshish karein.</span>`;
             };
-            recognition.start();
+            rec.start();
         }
 
         function selectModule(m) {
             currentMod = m;
-            for (let i = 1; i <= 6; i++) {
+            for(let i=1; i<=6; i++) {
                 const btn = document.getElementById(`mod-btn-${i}`);
-                if (i === m) {
-                    btn.className = "mod-active border-2 border-blue-600 p-4 rounded-xl text-left transition shadow-md";
+                if(i === m) {
+                    btn.className = "mod-active border-2 border-blue-600 p-5 rounded-2xl text-left transition shadow-md";
                 } else {
-                    btn.className = "bg-white border-2 border-slate-200 p-4 rounded-xl text-left hover:border-blue-400 transition shadow-sm";
+                    btn.className = "bg-white border-2 border-slate-200 p-5 rounded-2xl text-left hover:border-blue-400 transition shadow-sm";
                 }
             }
-            renderTab();
+            renderClassroom();
         }
 
         function selectTab(t) {
             currentTab = t;
-            ['lesson', 'practice', 'assignment', 'quiz'].forEach(tabName => {
+            ['lesson', 'stories', 'audioLab', 'practice', 'quiz'].forEach(tabName => {
                 const el = document.getElementById(`tab-${tabName}`);
-                if (tabName === t) {
-                    el.className = "tab-active flex-1 py-4 px-4 text-center whitespace-nowrap transition text-sm";
+                if(tabName === t) {
+                    el.className = "tab-active flex-1 py-4 px-4 text-center whitespace-nowrap transition text-sm font-semibold";
                 } else {
-                    el.className = "flex-1 py-4 px-4 text-center text-slate-600 hover:text-blue-600 whitespace-nowrap transition text-sm";
+                    el.className = "flex-1 py-4 px-4 text-center text-slate-600 hover:text-blue-600 whitespace-nowrap transition text-sm font-semibold";
                 }
             });
-            renderTab();
+            renderClassroom();
         }
 
-        function checkQuiz(selected, correct) {
-            const res = document.getElementById('quiz-result');
-            if (selected === correct) {
-                res.innerHTML = `<div class="p-4 bg-green-100 text-green-800 font-bold rounded-xl mt-4">🎉 Bilkul Sahi Jawab! Aap agle module ke liye taiyar hain.</div>`;
+        function checkQuizAnswer(selected, correct) {
+            const res = document.getElementById('quiz-feedback');
+            if(selected === correct) {
+                res.innerHTML = `<div class="p-4 bg-green-100 text-green-800 font-bold rounded-xl mt-4">🎉 Bilkul Sahi Jawab! Aapka concept ekdum clear hai.</div>`;
             } else {
-                res.innerHTML = `<div class="p-4 bg-red-100 text-red-800 font-bold rounded-xl mt-4">❌ Galat Jawab. Lesson ko ek baar phir padhein aur try karein!</div>`;
+                res.innerHTML = `<div class="p-4 bg-red-100 text-red-800 font-bold rounded-xl mt-4">❌ Galat Jawab. Kripya chapter lesson ko dhyan se dobara padhein!</div>`;
             }
         }
 
-        function renderTab() {
+        function renderClassroom() {
             const data = modulesData[currentMod];
             const area = document.getElementById('content-area');
             let html = `<div class="text-xs font-extrabold text-blue-600 uppercase tracking-wider mb-1">${data.badge}</div>`;
-            html += `<h3 class="text-2xl font-extrabold text-slate-900 mb-4">${data.title}</h3>`;
+            html += `<h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-6">${data.title}</h3>`;
 
-            if (currentTab === 'lesson') {
-                html += `<p class="text-slate-700 bg-blue-50/70 border border-blue-100 p-4 rounded-xl leading-relaxed mb-6">${data.explanation}</p>`;
-                html += `<h4 class="font-bold text-slate-800 mb-3">Examples with Hindi Translation & Audio:</h4><div class="space-y-3">`;
+            if(currentTab === 'lesson') {
+                html += `<p class="text-slate-700 bg-blue-50/70 border border-blue-100 p-5 rounded-2xl leading-relaxed mb-6 text-base">${data.explanation}</p>`;
+                html += `<h4 class="font-bold text-slate-800 mb-3 text-lg">Key Examples & Audio Pronunciation:</h4><div class="space-y-3.5">`;
                 data.examples.forEach(ex => {
                     html += `
-                        <div class="p-4 border border-slate-200 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-blue-300 transition">
+                        <div class="p-4 md:p-5 border border-slate-200 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-blue-300 transition bg-white shadow-xs">
                             <div>
                                 <div class="font-bold text-slate-900 text-base">${ex.en}</div>
                                 <div class="text-sm text-slate-500 mt-0.5">${ex.hi}</div>
                             </div>
-                            <button onclick="speakText('${ex.en.replace(/'/g, "\\'")}')" class="bg-blue-100 hover:bg-blue-200 text-blue-700 font-bold px-4 py-2 rounded-lg text-xs shrink-0 self-start sm:self-center transition">
-                                🔊 Listen
+                            <button onclick="speakText('${ex.en.replace(/'/g, "\\'")}')" class="bg-blue-100 hover:bg-blue-200 text-blue-700 font-bold px-4 py-2.5 rounded-xl text-xs shrink-0 transition flex items-center gap-1.5 self-start sm:self-center">
+                                🔊 Listen Audio
                             </button>
                         </div>
                     `;
                 });
                 html += `</div>`;
-            } else if (currentTab === 'practice') {
+            } 
+            else if(currentTab === 'stories') {
+                html += `<div class="mb-4"><p class="text-slate-600 text-sm">Yeh rahi aapki <strong>Story Reading Library</strong>. In kahaniyon ko padhein aur <strong>Listen Story</strong> button dabakar unka uchcharan sunein:</p></div>`;
+                html += `<div class="grid grid-cols-1 md:grid-cols-2 gap-6">`;
+                storiesLibrary.forEach((st, i) => {
+                    html += `
+                        <div class="bg-gradient-to-br from-amber-50/50 to-orange-50/50 border border-amber-200 p-6 rounded-2xl shadow-xs flex flex-col justify-between">
+                            <div>
+                                <h4 class="font-bold text-lg text-amber-900 mb-2">${st.title}</h4>
+                                <p class="text-slate-700 text-sm leading-relaxed mb-4">${st.text}</p>
+                                <div class="text-xs font-semibold text-amber-800 bg-amber-100/70 p-2.5 rounded-xl mb-4">${st.moral}</div>
+                            </div>
+                            <button onclick="speakText(\`${st.text.replace(/`/g, '')}\`)" class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-4 py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-1.5 w-full">
+                                🔊 Listen Full Story Audio
+                            </button>
+                        </div>
+                    `;
+                });
+                html += `</div>`;
+            }
+            else if(currentTab === 'audioLab') {
+                html += `<div class="mb-4"><p class="text-slate-600 text-sm">Yeh <strong>Audio & Video Listening Lab</strong> hai. Yahan dialogues aur conversations diye gaye hain jinhe sunkar aap real-world English samajhna seekh sakte hain:</p></div>`;
+                html += `<div class="space-y-4">`;
+                audioLabsData.forEach((lab, idx) => {
+                    html += `
+                        <div class="p-6 bg-slate-900 text-white rounded-2xl shadow-md">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-xs font-bold bg-blue-500/30 text-blue-300 px-3 py-1 rounded-full">${lab.speaker}</span>
+                                <button onclick="speakText(\`${lab.script.replace(/`/g, '')}\`)" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-4 py-2 rounded-xl text-xs transition">
+                                    🔊 Play Audio Clip
+                                </button>
+                            </div>
+                            <h4 class="font-bold text-lg text-amber-300 mb-2">${lab.title}</h4>
+                            <pre class="whitespace-pre-wrap font-sans text-xs md:text-sm text-slate-200 bg-slate-800 p-4 rounded-xl leading-relaxed">${lab.script}</pre>
+                        </div>
+                    `;
+                });
+                html += `</div>`;
+            }
+            else if(currentTab === 'practice') {
                 html += `
-                    <div class="bg-indigo-50 border border-indigo-100 p-6 rounded-2xl">
-                        <div class="text-xs font-bold uppercase text-indigo-600 mb-2">Speaking & Pronunciation Exercise</div>
-                        <p class="text-slate-600 text-sm mb-4">Pehle <strong>Listen</strong> par click karke sahi uchcharan sunein, phir <strong>Start Mic & Speak</strong> daba kar khud bolein:</p>
-                        <div class="bg-white p-4 rounded-xl border border-indigo-200 font-bold text-lg text-slate-900 mb-4">
+                    <div class="bg-gradient-to-br from-indigo-50 to-blue-50 border border-indigo-200 p-6 md:p-8 rounded-3xl">
+                        <div class="text-xs font-extrabold uppercase text-indigo-600 mb-2">Live Mic Speaking & Pronunciation Trainer</div>
+                        <p class="text-slate-600 text-sm mb-5">Pehle <strong>Listen Sentence</strong> dabakar sunein, phir <strong>Start Mic & Speak</strong> click karke khud wahi sentence bolkar check karein:</p>
+                        <div class="bg-white p-5 rounded-2xl border border-indigo-200 font-extrabold text-lg md:text-xl text-slate-900 mb-6 shadow-xs">
                             "${data.speakTarget}"
                         </div>
                         <div class="flex flex-wrap gap-3">
-                            <button onclick="speakText('${data.speakTarget.replace(/'/g, "\\'")}')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition">
-                                🔊 Listen Sentence
+                            <button onclick="speakText('${data.speakTarget.replace(/'/g, "\\'")}')" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl text-sm transition shadow">
+                                🔊 Listen Sentence Audio
                             </button>
-                            <button onclick="startMicPractice('${data.speakTarget.replace(/'/g, "\\'")}')" class="bg-rose-600 hover:bg-rose-700 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition">
+                            <button onclick="startMicCheck('${data.speakTarget.replace(/'/g, "\\'")}')" class="bg-rose-600 hover:bg-rose-700 text-white font-bold px-6 py-3 rounded-xl text-sm transition shadow">
                                 🎤 Start Mic & Speak
                             </button>
                         </div>
                         <div id="mic-output" class="mt-4"></div>
                     </div>
                 `;
-            } else if (currentTab === 'assignment') {
+            } 
+            else if(currentTab === 'quiz') {
                 html += `
-                    <div class="mb-8">
-                        <h4 class="font-bold text-lg text-slate-900 mb-2">📖 ${data.readingTitle}</h4>
-                        <div class="p-5 bg-amber-50/70 border border-amber-200 rounded-xl">
-                            <pre class="whitespace-pre-wrap font-sans text-slate-800 leading-relaxed text-base mb-4">${data.readingText}</pre>
-                            <button onclick="speakText(\`${data.readingText.replace(/`/g, '')}\`)" class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-4 py-2 rounded-lg text-xs transition">
-                                🔊 Listen Full Reading Passage
-                            </button>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-lg text-slate-900 mb-2">✍️ Writing Assignment</h4>
-                        <p class="text-slate-600 text-sm mb-3">${data.writingPrompt}</p>
-                        <textarea rows="4" class="w-full border-2 border-slate-200 rounded-xl p-3 focus:outline-none focus:border-blue-500 mb-4" placeholder="Apna answer yahan type karke practice karein..."></textarea>
-                        <details class="bg-slate-100 p-4 rounded-xl cursor-pointer">
-                            <summary class="font-bold text-sm text-blue-700">👀 Model Answer Dekhein (Compare karne ke liye)</summary>
-                            <pre class="whitespace-pre-wrap font-sans text-sm text-slate-800 mt-3 pt-3 border-t border-slate-200">${data.writingSample}</pre>
-                        </details>
-                    </div>
-                `;
-            } else if (currentTab === 'quiz') {
-                html += `
-                    <h4 class="font-bold text-lg text-slate-900 mb-4">Module ${currentMod} Quick MCQ Test</h4>
-                    <p class="text-base font-semibold text-slate-800 mb-4">${data.quiz.q}</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <h4 class="font-bold text-xl text-slate-900 mb-4">Module ${currentMod} Professional MCQ Assessment</h4>
+                    <p class="text-base font-semibold text-slate-800 mb-5 bg-slate-50 p-4 rounded-xl border border-slate-200">${data.quiz.q}</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                         ${data.quiz.options.map((opt, idx) => `
-                            <button onclick="checkQuiz(${idx}, ${data.quiz.ans})" class="text-left p-4 border-2 border-slate-200 rounded-xl hover:border-blue-500 hover:bg-blue-50 font-semibold transition">
+                            <button onclick="checkQuizAnswer(${idx}, ${data.quiz.ans})" class="text-left p-4.5 border-2 border-slate-200 rounded-2xl hover:border-blue-500 hover:bg-blue-50 font-semibold transition bg-white shadow-xs">
                                 ${String.fromCharCode(65 + idx)}. ${opt}
                             </button>
                         `).join('')}
                     </div>
-                    <div id="quiz-result"></div>
+                    <div id="quiz-feedback"></div>
                 `;
             }
 
             area.innerHTML = html;
-            updateProgressUI();
+            updateGlobalProgress();
         }
 
         function markCompleted() {
-            const key = `m${currentMod}-${currentTab}`;
-            if (!completedList.includes(key)) {
-                completedList.push(key);
-                localStorage.setItem('em_v2_completed', JSON.stringify(completedList));
+            const key = `mod${currentMod}-${currentTab}`;
+            if(!completedSet.includes(key)) {
+                completedSet.push(key);
+                localStorage.setItem('em_pro_v3_completed', JSON.stringify(completedSet));
             }
-            updateProgressUI();
+            updateGlobalProgress();
         }
 
-        function updateProgressUI() {
-            const key = `m${currentMod}-${currentTab}`;
-            const totalItems = 24; // 6 modules * 4 tabs
-            const pct = Math.min(100, Math.round((completedList.length / totalItems) * 100));
+        function updateGlobalProgress() {
+            const totalTasks = 30; // 6 modules * 5 tabs approx
+            const pct = Math.min(100, Math.round((completedSet.length / totalTasks) * 100));
             document.getElementById('progress-text').innerText = `${pct}%`;
             document.getElementById('cert-progress').innerText = `${pct}%`;
 
+            const currentKey = `mod${currentMod}-${currentTab}`;
             const statusEl = document.getElementById('module-status');
             const btnEl = document.getElementById('complete-btn');
-            if (completedList.includes(key)) {
+
+            if(completedSet.includes(currentKey)) {
                 statusEl.innerText = "Status: Completed ✅";
-                statusEl.className = "text-sm text-green-600 font-bold";
-                btnEl.innerText = "✓ Completed";
-                btnEl.className = "bg-slate-400 text-white font-bold px-5 py-2.5 rounded-xl text-sm cursor-default";
+                statusEl.className = "text-sm text-green-600 font-extrabold";
+                btnEl.innerText = "✓ Chapter Completed";
+                btnEl.className = "bg-slate-400 text-white font-bold px-6 py-3 rounded-xl text-sm cursor-default";
             } else {
                 statusEl.innerText = "Status: Pending";
-                statusEl.className = "text-sm text-slate-600";
+                statusEl.className = "text-sm text-slate-600 font-medium";
                 btnEl.innerText = "✓ Mark Chapter Complete";
-                btnEl.className = "bg-green-600 hover:bg-green-700 text-white font-bold px-5 py-2.5 rounded-xl text-sm transition shadow-sm";
+                btnEl.className = "bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-xl text-sm transition shadow-md";
             }
         }
 
-        // Certificate Functions
+        // Certificate Management
         function openCertificateModal() {
             document.getElementById('cert-date').innerText = new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
             document.getElementById('certificate-modal').classList.remove('hidden');
@@ -506,11 +520,11 @@
         }
         function updateCertName() {
             const val = document.getElementById('cert-name-input').value.trim();
-            document.getElementById('cert-name-display').innerText = val || "Student Name";
+            document.getElementById('cert-name-display').innerText = val || "Your Name";
         }
 
-        // Initialize
-        renderTab();
+        // Initial Load
+        renderClassroom();
     </script>
 </body>
 </html>
