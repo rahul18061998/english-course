@@ -1,0 +1,16 @@
+{
+  "name": "EnglishMastery Pro",
+  "short_name": "EnglishMastery",
+  "start_url": "/english-course/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "description": "Complete Zero to Advanced English Learning Platform",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/rahul18061998/english-course/main/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
